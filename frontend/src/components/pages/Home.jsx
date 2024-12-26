@@ -18,7 +18,7 @@ const Home = () => {
         searchUni({query}).unwrap();
         
         if (!isLoading && data?.results.length === 0) {
-            toast("Jokes not found", {type: "error"})
+            toast("University not found", {type: "error"})
         }
     
         setQuery("")
@@ -28,7 +28,7 @@ const Home = () => {
       console.log(name, country, web_page)
       saveFav({name, country, web_page}).unwrap().then(() => toast("Added to favorites", {type: "success"})).catch(() => {
         console.log(error)
-        toast("Joke has already been saved", {type: "error"})
+        toast("university has already been saved", {type: "error"})
       })
     }
 
@@ -73,7 +73,7 @@ const Home = () => {
     <div className='d-flex justify-content-center align-items-center vh-100 '>
         <InputGroup className="mb-3 shadow rounded"  style={{width: '50%'}}>
         <Form.Control
-          placeholder="Search for a joke...."
+          placeholder="Search for a University...."
           aria-label="Recipient's username"
           aria-describedby="basic-addon2"
           className='border-0'
